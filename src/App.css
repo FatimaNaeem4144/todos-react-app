@@ -1,0 +1,235 @@
+body{
+  background-color: #1f1e1e;
+  overflow: hidden;
+  color: #fff;
+}
+::selection{
+  background-color: #fff;
+  color: #087EA4;
+}
+h1 {
+  font-family: 'Bungee Shade', cursive;  
+  margin-top: 0%;
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  animation: glow 0.50s ease-in-out infinite alternate-reverse;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #087EA4, 0 0 10px #087EA4, 0 0 15px #087EA4, 0 0 20px #087EA4;
+  }
+  50% {
+    text-shadow: 0 0 10px #087EA4, 0 0 20px #087EA4, 0 0 30px #087EA4, 0 0 40px #087EA4;
+  }
+  100% {
+    text-shadow: 0 0 5px #087EA4, 0 0 10px #087EA4, 0 0 15px #087EA4, 0 0 20px #087EA4;
+  }
+}
+.todoWrapper{
+  background: transparent;
+  padding: 2%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.todoInput{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 25px;
+}
+.todoInputItem{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+.todoInputItem label{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.todoInputItem input{
+  padding: 8px;
+  border: none;
+  width: 250px;
+}
+.todoInputItem input:focus{
+  outline: 2px solid #087EA4;
+}
+.primaryBtn{
+  background-color: #087EA4;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  padding: 10px;
+  width: 59px;
+  cursor: pointer;
+}
+.primaryBtn:hover{
+  background-color: transparent;
+  border: 2px solid #087EA4;
+}
+.secondaryBtn{
+  background-color: rgba(128, 128, 128, 0.721);
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  margin-left: 4px;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+.active{
+  background-color:#087EA4;
+}
+.todoList{
+  display: flex;
+  flex-direction: column;
+}
+.btnArea{
+  margin-bottom: 15px;
+}
+.todoListItem{
+  background-color: #41404048;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.734);
+}
+.todoListItem h2{
+  font-size: 25px;
+  color: #087EA4;
+  font-weight: bold;
+  margin: 0;
+}
+.todoListItem p{
+  font-size: 17px;
+  color: rgb(159,159,159);
+  margin-top: 8px;  
+}
+.icon{
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon:hover{
+  color: red;
+}
+.checkIcon{
+  font-size: 30px;
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.checkIcon:hover{
+  color: #087EA4;
+}
+.editIcon {
+  font-size: 30px;
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.editIcon:hover {
+  color: blue;
+}
+
+.editInput {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  width: 250px;
+  margin: 5px;
+}
+.editInput:focus{
+  outline: 2px solid #087EA4;
+}
+.saveButton {
+  background-color: #087EA4;
+  color: white;
+  font-size: 14px;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.editClick{
+  border-bottom: 2px solid #087EA4;
+  padding: 20px;
+} 
+
+
+@media (max-width: 415px) {
+  .todoWrapper {
+    padding: 1%;
+    margin-top: 2%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  .todoInput {
+    flex-direction: column;
+  }
+  
+  .todoListItem {
+    padding: 15px;
+  }
+  .todoInputItem label{ 
+    margin-bottom: 5px;
+  }
+  .todoInputItem input{
+    border: 1px solid #087EA4;
+    width: 240px;
+    margin: 5px 0;
+    margin-left: 8px;
+  }
+  .primaryBtn{
+    margin-top: 15px;
+    padding: 10px;
+    width: 59px;
+  }
+  .secondaryBtn{
+    margin-top: 15px;
+    margin-left: 4px;
+    padding: 10px;
+    width: fit-content;
+  }
+  .active{
+    background-color:#087EA4;
+  }
+  .icon{
+    font-size: 27px;
+  }
+  .checkIcon{
+    font-size: 28px;
+    margin-left: 5px;
+  }
+  .editIcon {
+    font-size: 25px;
+    margin-left: 5px;
+  }
+  .editInput {
+    font-size: 15px;
+    padding: 5px;
+    width: 250px;
+  }
+  .editClick{
+    padding: 4px;
+  } 
+  
+}
